@@ -4,7 +4,11 @@ class HelloWorld:
 
     def __init__(self):
         alphabet_user_input = input("Please press every alphabetic character key on your keyboard:\n")
-        self.ALPHABET.extend(list(set(alphabet_user_input)))
+        if alphabet_user_input:
+            self.ALPHABET.extend(list(set(alphabet_user_input)))
+        else:
+            print("You did not put in any characters. :(")
+            exit()
 
     @staticmethod
     def get_letter_indexes(letter, input_list):
