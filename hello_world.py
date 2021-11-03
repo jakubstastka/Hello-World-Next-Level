@@ -14,8 +14,9 @@ class HelloWorld:
     def get_letter_indexes(letter, input_list):
         try:
             return input_list.index(letter)
-        except AttributeError as error:
-            print(error)
+        except (AttributeError, ValueError):
+            print("You did not put in enough letters. How dare you.")
+            exit()
 
     @staticmethod
     def assign_letter(letter_dict, looking_for, tuple_index=1):
