@@ -1,9 +1,11 @@
 class HelloWorld:
     ALPHABET = []
-    HELLO_WORLD_LETTERS = ['d', 'e', 'h', 'l', 'o', 'r', 'w']
+    HELLO_WORLD_LETTERS = ["d", "e", "h", "l", "o", "r", "w"]
 
     def __init__(self):
-        alphabet_user_input = input("Please press every alphabetic character key on your keyboard:\n")
+        alphabet_user_input = input(
+            "Please press every alphabetic character key on your keyboard:\n"
+        )
         if alphabet_user_input:
             self.ALPHABET.extend(list(set(alphabet_user_input)))
         else:
